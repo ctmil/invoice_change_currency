@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="currency_view_sale_advance_payment_inv" model="ir.ui.view">
+        <field name="name">currency_view_sale_advance_payment_inv</field>
+	<field name="model">sale.advance.payment.inv</field>
+	<field name="inherit_id" ref="sale.view_sale_advance_payment_inv"></field>
+	<field name="arch" type="xml">
+		<field name="deposit_account_id" position="before">
+			<field name="currency_id" />
+		</field>
+		<!-- xpath expr="//form/footer" position="replace">
+                        <button name="create_invoices_new" string="Create and View Invoice" type="object" context="{'open_invoices': True}" class="btn-primary"/>
+                        <button name="create_invoices_new" string="Create Invoice" type="object"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+		</xpath -->
+        </field>
+    </record>
+
+</odoo>
